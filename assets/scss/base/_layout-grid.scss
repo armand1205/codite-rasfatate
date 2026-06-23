@@ -1,0 +1,53 @@
+/* 1. Grid */
+/*  ? Cauta un usecase pentru acest grid in aplicatie */
+.grid-1 {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-placement, auto-fill), minmax(var(--grid-min-item-size, 16rem), 1fr));
+    gap: var(--gutter, var(--space-s-l));
+}
+
+/* The default behaviour of this composition is to create a grid that sizes columns with the auto-fill keyword.
+This creates as many columns as it can, sized by minmax. If we were to use auto-fit instead,
+it would allow the columns to expand, rather than trying to pack as many columns into a row as it can. */
+
+.grid-1[data-layout='thirds'] {
+    --grid-placement: auto-fit;
+    --grid-min-item-size: clamp(16rem, 33%, 28rem);
+}
+
+.grid-container {
+    &__2 {
+        display: grid;
+        gap: clamp(var(--space-4), 2.237rem + 1.316vi, var(--space-64));
+
+        @media (min-width: 48rem) {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+    }
+
+    &__3 {
+        display: grid;
+        gap: var(--space-32_64);
+
+        @media (min-width: 48rem) {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        @media (min-width: 96rem) {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+    }
+
+    &__4 {
+        display: grid;
+        gap: clamp(var(--space-10), 2.237rem + 1.316vi, var(--space-14));
+
+        @media (min-width: 48rem) {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        @media (min-width: 96rem) {
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+    }
+}

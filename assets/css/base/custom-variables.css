@@ -1,0 +1,55 @@
+/* Table of contents */
+/* ------------------------------------------------- */
+/* 1. Spaces */
+/* 2. Shadows */
+/* 3. Max Width Page */
+/* 4. Transition */
+/* 5. Card */
+/* 6. Icon Size */
+
+/* ------------------------------------------------------------ */
+
+:root {
+    /* 1. Spaces */
+    --space-3: 3px;
+    --space-28: 28px;
+
+    /* Space 14px --> 20px */
+    --space-14_20: clamp(var(--space-14), 0.776rem + 0.493vi, var(--space-20));
+
+    /* space 16px --> 20px */
+    --space-16_20: clamp(var(--space-16), 0.934rem + 0.329vi, var(--space-20));
+
+    /* space 16px --> 24px */
+    --space-16_24: clamp(var(--space-16), 0.868rem + 0.658vi, var(--space-24));
+
+    /* space 16px --> 32px */
+    --space-16_32: clamp(var(--space-16), 0.934rem + 0.329vi, var(--space-32));
+
+    /* space 16px --> 64px */
+    --space-16_64: clamp(var(--space-16), 0.211rem + 3.947vi, var(--space-64));
+
+    /* space 24px --> 32px */
+    --space-24_32: clamp(var(--space-24), 1.368rem + 0.658vi, var(--space-32));
+
+    /* space 24px --> 64px */
+    --space-24_64: clamp(var(--space-24), 0.842rem + 3.289vi, var(--space-64));
+
+    /* space 32px --> 64px */
+    --space-32_64: clamp(var(--space-32), 1.474rem + 2.632vi, var(--space-64));
+
+    /* space 64px --> 80px */
+    --sapce-64_80: clamp(var(--space-64), 3.737rem + 1.316vi, var(--space-80));
+
+    /* 2. Shadows */
+
+    /* 3. Max Width Page */
+
+    /* 4. Transition */
+    --transition: all 0.3s ease;
+
+    /* 5. Card */
+
+    /* 6. Icon Size */
+    --icon-size-lg_xl: clamp(var(--icon-size-lg), 1.618rem + 0.658vi, var(--icon-size-xl));
+}

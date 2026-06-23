@@ -1,0 +1,165 @@
+// Button Styles
+.btn {
+    // Solid / Default Button
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-8);
+    border: var(--border-width-thick) solid var(--color-border-invisible);
+    border-radius: var(--border-radius-sm);
+    padding: var(--space-14) var(--space-30);
+    transition: var(--transition);
+    cursor: pointer;
+
+    &:has(svg) {
+        padding: var(--space-14) var(--space-16);
+
+        svg {
+            width: var(--icon-size-sm);
+            aspect-ratio: 1/1;
+            flex-shrink: 0;
+        }
+    }
+
+    span {
+        font-weight: var(--type-fontweight-sans-semibold);
+    }
+
+    @media (min-width: 768px) {
+        width: fit-content;
+    }
+
+    // Button Small
+    &--small {
+        padding: var(--space-12) var(--space-24);
+
+        &:has(svg) {
+            padding: var(--space-12) var(--space-10);
+        }
+
+        span {
+            // h6
+            font-size: clamp(0.938rem, 0.905rem + 0.164vi, 1.063rem);
+        }
+    }
+
+    // Link Button
+    &--link {
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        border-radius: 8px;
+        text-underline-offset: 4px;
+        text-decoration-thickness: 2px;
+        transition: color 120ms ease;
+
+        svg {
+            width: 16px;
+            aspect-ratio: 1/1;
+            flex-shrink: 0;
+        }
+
+        span {
+            font-weight: 600;
+        }
+
+        &.btn--small {
+            padding: 0;
+
+            span {
+                // h6
+                font-size: clamp(0.938rem, 0.905rem + 0.164vi, 1.063rem);
+            }
+        }
+    }
+
+    // Button Close
+    &--close {
+        width: var(--icon-size-lg);
+        aspect-ratio: 1/1;
+        color: var(--icon-default);
+        background-color: transparent;
+        border: var(--border-width-thin) solid transparent;
+        border-radius: var(--border-radius-sm);
+        padding: 0;
+        cursor: pointer;
+        transition: var(--transition);
+
+        svg {
+            flex-shrink: 0;
+        }
+    }
+}
+
+// Button States
+.btn {
+    // Solid / Default Button States
+    color: var(--text-on-action-solid-default);
+    background: var(--background-action-primary-solid-default);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+
+    &:hover {
+        background-color: var(--background-action-primary-solid-hover);
+        box-shadow: 0 14px 35px rgba(0, 0, 0, 0.16);
+    }
+
+    &:focus-visible {
+        background-color: var(--background-action-primary-solid-focused);
+        box-shadow: 0 14px 35px rgba(0, 0, 0, 0.16);
+        outline: var(--border-width-thick) solid var(--color-border-focus-ring-primary-focused);
+        outline-offset: var(--space-4);
+    }
+
+    // Button Outline States
+    &--outline {
+        color: var(--text-on-action-primary-outline-default);
+        background-color: var(--background-action-primary-outline-default);
+        border-color: var(--color-border-action-primary-outline-default);
+
+        &:hover {
+            // @Andrei - de ce avem variabile cu nume diferite dar aceeasi culoare
+            // ex: --text-on-action-primary-outline-default si --text-on-action-primary-outline-hover
+            color: var(--text-on-action-primary-outline-hover);
+            background-color: var(--background-action-primary-outline-hover);
+        }
+
+        &:focus-visible {
+            color: var(--text-on-action-primary-outline-focused);
+            background-color: var(--background-action-primary-outline-focused);
+            border-color: var(--color-border-action-primary-outline-focused);
+            outline-color: var(--color-border-focus-ring-primary-focused);
+        }
+    }
+
+    // Link Button States
+    &--link {
+        color: inherit;
+        border: 0;
+        background: transparent;
+
+        &:hover {
+            color: inherit;
+        }
+
+        &:focus-visible {
+            color: inherit;
+            outline: 2px solid #000;
+            outline-offset: 2px;
+        }
+    }
+
+    // Button Close States
+    &--close {
+        &:hover {
+            color: var(--menu-icon-hover);
+        }
+
+        &:focus-visible {
+            color: var(--menu-icon-focused);
+            background-color: var(--menu-background-focused);
+            outline: none;
+        }
+    }
+}

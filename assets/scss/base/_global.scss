@@ -1,0 +1,17 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* @Armand - VERIFICA: Posibil necesar pentru Detalii Extensibile */
+@view-transition {
+    navigation: auto;
+}
+
+body {
+    color: #000;
+    background-color: #fff;
+}
+
+a {
+    color: inherit;
+}

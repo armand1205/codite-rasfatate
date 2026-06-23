@@ -1,0 +1,20 @@
+{
+    "type": "module",
+    "name": "ui-kit-template",
+    "private": true,
+    "devDependencies": {
+        "@tokens-studio/sd-transforms": "^2.0.3",
+        "prettier": "^3.8.1",
+        "sass": "^1.98.0",
+        "style-dictionary": "^5.4.0"
+    },
+    "engines": {
+        "node": ">=22"
+    },
+    "scripts": {
+        "tokens": "node assets/tokens/build.mjs",
+        "build:css": "sass assets/scss/main.scss:assets/css/main.css --style expanded",
+        "dev": "sass --watch assets/scss/main.scss:assets/css/main.css --style expanded",
+        "format": "prettier . --write"
+    }
+}
