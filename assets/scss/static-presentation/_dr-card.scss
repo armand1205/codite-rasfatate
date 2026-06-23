@@ -1,9 +1,10 @@
 .dr-card {
     &__frame {
-        background: linear-gradient(135deg, #e5e7eb, #cbd5e1);
+        background: linear-gradient(135deg, var(--color-pink-700), var(--color-pink-500));
         border-radius: 16px;
-        box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+        box-shadow: 0 -4px 4px 1px rgba(15, 23, 42, 0.08);
         padding: 2px;
+        transition: var(--transition);
     }
 
     &__wrapper {
@@ -30,6 +31,10 @@
 
             & > a {
                 text-decoration: none;
+
+                & > img {
+                    width: 100px;
+                }
             }
 
             .dr-logo {
@@ -92,7 +97,7 @@
 .dr-card {
     &__frame {
         &:hover {
-            box-shadow: 0 14px 35px rgba(15, 23, 42, 0.12);
+            box-shadow: 0 12px 36px 1px rgba(15, 23, 42, 0.12);
         }
     }
 }

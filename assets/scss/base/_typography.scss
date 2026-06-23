@@ -1,33 +1,100 @@
-// @font-face {
-//     font-family: 'Nume Font 1';
-//     src: url('../#Nume Font 1#') format('woff2');
-//     font-weight: 100 900;
-//     font-style: normal;
-//     font-display: swap;
-// }
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('../fonts/font-1/Playfair-VariableFont_opsz,wdth,wght.woff2') format('woff2');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
 
-// @font-face {
-//     font-family: 'Nume Font 1 Italic';
-//     src: url('../#Nume Font 1 Italic#') format('woff2');
-//     font-weight: 100 900;
-//     font-style: italic;
-//     font-display: swap;
-// }
+@font-face {
+    font-family: 'Playfair Display Italic';
+    src: url('../fonts/font-1/Playfair-Italic-VariableFont_opsz,wdth,wght.woff2') format('woff2');
+    font-weight: 100 900;
+    font-style: italic;
+    font-display: swap;
+}
 
-// @font-face {
-//     font-family: 'Nume Font 2';
-//     src: url('../#Nume Font 2#') format('woff2');
-//     font-weight: 100 900;
-//     font-style: normal;
-//     font-display: swap;
-// }
+@font-face {
+    font-family: 'Lora';
+    src: url('../fonts/font-2/Lora-VariableFont_wght.woff2') format('woff2');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
 
-// @font-face {
-//     font-family: 'Nume Font 2 Italic';
-//     src: url('../#Nume Font 2 Italic#') format('woff2');
-//     font-weight: 100 900;
-//     font-style: italic;
-//     font-display: swap;
-// }
+@font-face {
+    font-family: 'Lora Italic';
+    src: url('../fonts/font-2/Lora-Italic-VariableFont_wght.woff2') format('woff2');
+    font-weight: 100 900;
+    font-style: italic;
+    font-display: swap;
+}
 
 /* 2. Dimensiuni Headings */
+body {
+    font-family: 'Lora', serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.small {
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.large {
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1,
+.h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h2,
+.h2 {
+    font-size: 32px;
+    line-height: 1.2;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h3,
+.h3 {
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h4,
+.h4 {
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h5,
+.h5 {
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h6,
+.h6 {
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 400;
+    font-style: normal;
+}

@@ -11,6 +11,7 @@
     padding: var(--space-14) var(--space-30);
     transition: var(--transition);
     cursor: pointer;
+    text-decoration: none;
 
     &:has(svg) {
         padding: var(--space-14) var(--space-16);
@@ -22,9 +23,8 @@
         }
     }
 
-    span {
-        font-weight: var(--type-fontweight-sans-semibold);
-    }
+    // span {
+    // }
 
     @media (min-width: 768px) {
         width: fit-content;
@@ -57,6 +57,12 @@
 
         svg {
             width: 16px;
+            aspect-ratio: 1/1;
+            flex-shrink: 0;
+        }
+
+        img {
+            width: 22px;
             aspect-ratio: 1/1;
             flex-shrink: 0;
         }
@@ -108,8 +114,8 @@
     &:focus-visible {
         background-color: var(--background-action-primary-solid-focused);
         box-shadow: 0 14px 35px rgba(0, 0, 0, 0.16);
-        outline: var(--border-width-thick) solid var(--color-border-focus-ring-primary-focused);
-        outline-offset: var(--space-4);
+        outline: var(--border-width-thick) solid var(--color-pink-300);
+        outline-offset: var(--space-2);
     }
 
     // Button Outline States
