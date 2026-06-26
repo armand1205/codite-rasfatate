@@ -1,36 +1,40 @@
 // Button Styles
 .btn {
-    // Solid / Default Button
     height: fit-content;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: var(--space-8);
-    border: var(--border-width-thick) solid var(--color-border-invisible);
+    border: var(--border-width-thick) solid transparent;
     border-radius: var(--border-radius-sm);
     padding: var(--space-14) var(--space-30);
     transition: var(--transition);
     cursor: pointer;
     text-decoration: none;
+    font-family: var(--font-family-body);
+    font-size: 0.9375rem;
+    font-weight: 500;
+    letter-spacing: 0.015em;
+
+    span {
+        font-weight: inherit;
+        letter-spacing: inherit;
+    }
 
     &:has(svg) {
         padding: var(--space-14) var(--space-16);
 
         svg {
-            width: var(--icon-size-sm);
+            width: var(--space-24);
             aspect-ratio: 1/1;
             flex-shrink: 0;
         }
     }
 
-    // span {
-    // }
-
     @media (min-width: 768px) {
         width: fit-content;
     }
 
-    // Button Small
     &--small {
         padding: var(--space-12) var(--space-24);
 
@@ -39,24 +43,26 @@
         }
 
         span {
-            // h6
             font-size: clamp(0.938rem, 0.905rem + 0.164vi, 1.063rem);
         }
     }
 
-    // Link Button
+    &--outline {
+        border-width: var(--border-width-thick);
+    }
+
     &--link {
         width: fit-content;
         display: flex;
         align-items: center;
-        gap: 8px;
-        border-radius: 8px;
-        text-underline-offset: 4px;
-        text-decoration-thickness: 2px;
+        gap: var(--space-8);
+        border-radius: var(--border-radius-md);
+        text-underline-offset: var(--space-4);
+        text-decoration-thickness: var(--border-width-thick);
         transition: color 120ms ease;
 
         svg {
-            width: 16px;
+            width: var(--space-16);
             aspect-ratio: 1/1;
             flex-shrink: 0;
         }
@@ -66,26 +72,11 @@
             aspect-ratio: 1/1;
             flex-shrink: 0;
         }
-
-        span {
-            font-weight: 600;
-        }
-
-        &.btn--small {
-            padding: 0;
-
-            span {
-                // h6
-                font-size: clamp(0.938rem, 0.905rem + 0.164vi, 1.063rem);
-            }
-        }
     }
 
-    // Button Close
     &--close {
-        width: var(--icon-size-lg);
+        width: var(--space-44);
         aspect-ratio: 1/1;
-        color: var(--icon-default);
         background-color: transparent;
         border: var(--border-width-thin) solid transparent;
         border-radius: var(--border-radius-sm);
@@ -101,71 +92,93 @@
 
 // Button States
 .btn {
-    // Solid / Default Button States
-    color: var(--text-on-action-solid-default);
-    background: var(--background-action-primary-solid-default);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    color: var(--color-gray-50);
+    background-color: var(--color-pink-700);
+    border-color: var(--color-pink-700);
 
     &:hover {
-        background-color: var(--background-action-primary-solid-hover);
-        box-shadow: 0 14px 35px rgba(0, 0, 0, 0.16);
+        background-color: var(--color-pink-800);
+        border-color: var(--color-pink-800);
     }
 
     &:focus-visible {
-        background-color: var(--background-action-primary-solid-focused);
-        box-shadow: 0 14px 35px rgba(0, 0, 0, 0.16);
-        outline: var(--border-width-thick) solid var(--color-pink-300);
+        background-color: var(--color-pink-700);
+        border-color: var(--color-pink-700);
+        outline: 4px solid var(--color-pink-200);
         outline-offset: var(--space-2);
     }
 
-    // Button Outline States
+    &:active {
+        background-color: var(--color-pink-900);
+        border-color: var(--color-pink-900);
+    }
+
     &--outline {
-        color: var(--text-on-action-primary-outline-default);
-        background-color: var(--background-action-primary-outline-default);
-        border-color: var(--color-border-action-primary-outline-default);
+        color: var(--color-pink-800);
+        background-color: transparent;
+        border-color: var(--color-pink-700);
 
         &:hover {
-            // @Andrei - de ce avem variabile cu nume diferite dar aceeasi culoare
-            // ex: --text-on-action-primary-outline-default si --text-on-action-primary-outline-hover
-            color: var(--text-on-action-primary-outline-hover);
-            background-color: var(--background-action-primary-outline-hover);
+            color: var(--color-pink-900);
+            background-color: var(--color-pink-100);
+            border-color: var(--color-pink-800);
         }
 
         &:focus-visible {
-            color: var(--text-on-action-primary-outline-focused);
-            background-color: var(--background-action-primary-outline-focused);
-            border-color: var(--color-border-action-primary-outline-focused);
-            outline-color: var(--color-border-focus-ring-primary-focused);
+            color: var(--color-pink-800);
+            background-color: var(--color-pink-100);
+            border-color: var(--color-pink-700);
+            outline: 4px solid var(--color-pink-200);
+            outline-offset: var(--space-2);
+        }
+
+        &:active {
+            color: var(--color-pink-950);
+            background-color: var(--color-pink-300);
+            border-color: var(--color-pink-900);
         }
     }
 
-    // Link Button States
     &--link {
-        color: inherit;
+        color: var(--color-pink-800);
         border: 0;
         background: transparent;
 
         &:hover {
-            color: inherit;
+            color: var(--color-pink-700);
+            text-decoration: underline;
         }
 
         &:focus-visible {
-            color: inherit;
-            outline: 2px solid #000;
-            outline-offset: 2px;
+            color: var(--color-pink-800);
+            outline: 4px solid var(--color-pink-300);
+            outline-offset: var(--space-2);
+        }
+
+        &:active {
+            color: var(--color-pink-900);
         }
     }
 
-    // Button Close States
     &--close {
+        color: var(--color-gray-700);
+        background-color: transparent;
+
         &:hover {
-            color: var(--menu-icon-hover);
+            color: var(--color-pink-700);
+            background-color: var(--color-pink-200);
         }
 
         &:focus-visible {
-            color: var(--menu-icon-focused);
-            background-color: var(--menu-background-focused);
-            outline: none;
+            color: var(--color-pink-800);
+            background-color: var(--color-pink-300);
+            outline: 4px solid var(--color-pink-300);
+            outline-offset: var(--space-2);
+        }
+
+        &:active {
+            color: var(--color-pink-900);
+            background-color: var(--color-pink-400);
         }
     }
 }

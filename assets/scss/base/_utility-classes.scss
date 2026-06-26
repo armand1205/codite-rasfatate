@@ -3,10 +3,6 @@
     display: flex;
     flex-direction: row;
 
-    & > * {
-        width: 100%;
-    }
-
     &__md {
         display: flex;
         flex-direction: column;
@@ -45,6 +41,10 @@
     gap: var(--space-16);
 }
 
+.gap-16_24 {
+    gap: var(--space-16_24);
+}
+
 // 24
 .gap-24 {
     gap: var(--space-24);
@@ -59,6 +59,10 @@
     gap: var(--space-32);
 }
 
+.gap-32_48 {
+    gap: var(--space-32_48);
+}
+
 .gap-32_64 {
     gap: var(--space-32_64);
 }
@@ -66,4 +70,55 @@
 // 64
 .gap-64 {
     gap: var(--space-64);
+}
+
+// Colors
+// Pink
+.color-pink-700 {
+    color: var(--color-pink-700);
+}
+
+// Gray
+.color-gray-500 {
+    color: var(--color-gray-500);
+}
+
+.color-gray-600 {
+    color: var(--color-gray-600);
+}
+
+.color-gray-700 {
+    color: var(--color-gray-700);
+}
+
+.color-gray-800 {
+    color: var(--color-gray-800);
+}
+
+// Text
+.uppercase {
+    text-transform: uppercase;
+}
+
+.pretty {
+    text-wrap: pretty;
+}
+
+.balance {
+    text-wrap: balance;
+}
+
+// Font
+.font-semibold {
+    font-weight: 500;
+}
+
+// Actions Container
+.actions__container {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+    }
 }

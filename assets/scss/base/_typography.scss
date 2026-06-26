@@ -32,9 +32,29 @@
 
 /* 2. Dimensiuni Headings */
 body {
-    font-family: 'Lora', serif;
+    font-family: var(--font-family-body);
     font-weight: 400;
     font-style: normal;
+}
+
+.display-1,
+.display-2 {
+    font-family: var(--font-family-display);
+    font-style: normal;
+    font-weight: 500;
+    text-wrap: balance;
+}
+
+.display-1 {
+    font-size: clamp(2.75rem, 1.5rem + 4vi, 4.5rem);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+}
+
+.display-2 {
+    font-size: clamp(2.125rem, 1.25rem + 2.5vi, 3.25rem);
+    line-height: 1.12;
+    letter-spacing: -0.015em;
 }
 
 .small {
@@ -97,4 +117,8 @@ h6,
     line-height: 1.2;
     font-weight: 400;
     font-style: normal;
+}
+
+.italic {
+    font-style: italic;
 }

@@ -35,6 +35,9 @@
     /* space 24px --> 64px */
     --space-24_64: clamp(var(--space-24), 0.842rem + 3.289vi, var(--space-64));
 
+    /* space 32px --> 48px */
+    --space-32_48: clamp(var(--space-32), 1.737rem + 1.316vi, var(--space-48));
+
     /* space 32px --> 64px */
     --space-32_64: clamp(var(--space-32), 1.474rem + 2.632vi, var(--space-64));
 

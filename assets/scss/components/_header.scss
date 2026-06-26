@@ -1,7 +1,6 @@
 .header {
     &__wrapper {
         width: stretch;
-        background-color: var(--color-pink-50);
         padding-block: var(--space-16_24);
         padding-inline: var(--space-16_32);
         position: relative;
@@ -76,7 +75,7 @@
                 font-weight: 500;
             }
 
-            &-line {
+            &__line {
                 width: stretch;
                 height: var(--space-2);
                 border-radius: var(--border-radius-sm);
@@ -91,8 +90,13 @@
 
 // Header States
 .header {
-    // &__wrapper {
-    // }
+    &__wrapper {
+        border-radius: var(--border-radius-xl);
+        background-color: var(--color-gray-50);
+        box-shadow:
+            0 4px 24px -1px rgba(0, 0, 0, 0.1),
+            0 2px 24px -1px rgba(0, 0, 0, 0.06);
+    }
 
     // &__container {
     // }
@@ -111,11 +115,11 @@
 
     &__nav {
         &--list {
-            background-color: var(--color-pink-50);
+            background-color: var(--color-gray-50);
         }
 
         &--item {
-            &-line {
+            &__line {
                 background-color: var(--color-gray-950);
                 transform: scaleX(0);
                 transform-origin: left center;
@@ -123,7 +127,7 @@
             }
 
             &:hover {
-                & > .header__nav--item-line {
+                & > .header__nav--item__line {
                     transform: scaleX(1);
                 }
             }

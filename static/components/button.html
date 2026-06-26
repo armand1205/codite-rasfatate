@@ -3,16 +3,16 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>UI Kit Template &#10022; Header</title>
+        <title>UI Kit Template &#10022; Button</title>
         <link rel="stylesheet" href="../../assets/css/base/variables.css" />
         <link rel="stylesheet" href="../../assets/css/base/custom-variables.css" />
         <link rel="stylesheet" href="../../assets/css/main.css" />
     </head>
     <body>
-        <main class="dr-page__wrapper" style="max-width: none">
+        <main class="dr-page__wrapper">
             <!-- Template Presentation Card -->
             <div class="dr-card__frame">
-                <div class="dr-card__wrapper" style="padding-bottom: 150px">
+                <div class="dr-card__wrapper">
                     <div class="dr-card__header">
                         <div class="dr-card__header-brand">
                             <a href="../../index.html">
@@ -32,7 +32,7 @@
                         </div>
 
                         <div class="dr-card__header-title">
-                            <h1>Header</h1>
+                            <h1>Button</h1>
 
                             <div class="dr-card__header-description">
                                 <span>Aici o să fie o descriere</span>
@@ -43,48 +43,14 @@
                     <hr class="hr-divider" />
 
                     <div class="dr-card__body flex-col gap-32_64">
-                        <div>
-                            <!-- Start Header -->
-                            <header class="header__wrapper">
-                                <div class="header__container">
-                                    <a href="../../index.html" class="header__logo">
-                                        <img src="../../assets/img/coiditerasfatate-logo-text.svg" class="header__logo" alt="Logo Codite Rasfatate" />
-                                    </a>
+                        <div class="flex-col gap-32_64">
+                            <button class="btn"><span>Button</span></button>
 
-                                    <button class="header__btn" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Deschide meniul navigatiei">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false" aria-hidden="true" role="img">
-                                            <path d="M3 5h18" />
-                                            <path d="M3 12h18" />
-                                            <path d="M3 19h18" />
-                                        </svg>
-                                    </button>
+                            <button class="btn btn--outline"><span>Button Outline</span></button>
 
-                                    <nav id="site-nav" class="header__nav" data-state="closed" aria-label="Navigatie principala" hidden>
-                                        <ul class="header__nav--list">
-                                            <li class="header__nav--item">
-                                                <a href="#" class="header__nav--link h4">Link 1</a>
+                            <a href="#" class="btn--link"><span>Button Link</span></a>
 
-                                                <div class="header__nav--item__line"></div>
-                                            </li>
-
-                                            <li class="header__nav--item">
-                                                <a href="#" class="header__nav--link h4">Link 1</a>
-
-                                                <div class="header__nav--item__line"></div>
-                                            </li>
-
-                                            <li class="header__nav--item">
-                                                <a href="#" class="header__nav--link h4">Link 1</a>
-
-                                                <div class="header__nav--item__line"></div>
-                                            </li>
-                                        </ul>
-                                    </nav>
-
-                                    <a href="#form-section" class="header__cta btn"><span>Call to action</span></a>
-                                </div>
-                            </header>
-                            <!-- End Header -->
+                            <button class="btn--close"><span>X</span></button>
                         </div>
                     </div>
                 </div>
